@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config></context:annotation-config>
+    
+    
+    <!-- 1st way to inject value using property and value  -->
+    
+    <bean class="com.springcore.spring.student" name="student1">
+       <property name="studentId">
+       <value>01</value>
+       </property>
+        <property name="studentName">
+       <value>Vinit Kumar</value>
+       </property>
+        <property name="studentAddress">
+       <value>Madhuban</value>
+       </property>
+            
+    </bean>
+   <!-- 2nd way to inject value using value only --> 
+     <bean class="com.springcore.spring.student" name="student2">
+       <property name="studentId" value="02"/>
+      
+        <property name="studentName" value="Vinita Singh"/>
+       
+        <property name="studentAddress" value  ="Madhuban"/>
+       </bean>
+       <!-- 3rd way to inject value using p schema -->
+       <bean class="com.springcore.spring.student" name="student3" p:studentId ="03" p:studentName="Tanvi Singh" p:studentAddress="Madhuban"/>
+
+
+
+</beans>
